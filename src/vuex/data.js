@@ -20,34 +20,34 @@ const articles = __RES__.contentsSortedByTime.slice(0, 6).map(art => {
 })
 
 const base = {
-  title: 'Jason 的简历',
-  name: '陈俊毅',
-  shortDescription: '大四学生，前端工程师进阶中...',
-  description: '高中接触 Web 开发和设计，上了大学正式学习前端、PHP、Node.js，大一开始在校不间断负责多个公众号、小程序的开发。目前在腾讯公司 Web 前端开发岗位实习。',
+  title: 'Aleen 的简历',
+  name: '李子豪',
+  shortDescription: '工作经验2年，前端工程师进阶中...',
+  description: '自2015年开始学习前端，经过一年的学习，工作两年时间，现在职于领克酷比克公司,负责公众号和小程序的开发和维护',
   infomations: [{
     icon: 'https://cdn.ijason.cc/static/svgs/info/birthday.svg',
     key: '生日',
-    value: '1996.2.11'
+    value: '1991.2.17'
   }, {
     icon: 'https://cdn.ijason.cc/static/svgs/info/education.svg',
     key: '教育经历',
-    value: '深圳大学 · 通信工程'
+    value: '渭南师范 · 地理科学'
   }, {
     icon: 'https://cdn.ijason.cc/static/svgs/info/nowCity.svg',
     key: '居住地',
-    value: '广东 · 深圳'
+    value: '重庆 · 沙坪坝'
   }, {
     icon: 'https://cdn.ijason.cc/static/svgs/info/email.svg',
     key: '邮箱',
-    value: 'jason@iszu.cn'
+    value: 'aleenli1992@gmail.com'
   }, {
     icon: 'https://cdn.ijason.cc/static/svgs/info/phone.svg',
     key: '手机号',
-    value: '+86 13128931074'
+    value: '+86 185 8036 0217'
   }, {
     icon: 'https://cdn.ijason.cc/static/svgs/info/company.svg',
     key: '公司',
-    value: '腾讯 · 深圳'
+    value: '重庆 · 南岸'
   }],
   skills: [{
     value: 'HTML',
@@ -63,22 +63,26 @@ const base = {
       'border-color': '#ffeb0e'
     }
   }, {
-    value: 'Node.js',
-    logo: 'https://cdn.ijason.cc/static/images/logos/nodejs.png',
+    value: 'React.js',
+    logo: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/react2.png',
     style: {
-      background: 'linear-gradient(to bottom, #8ccf00 , #80bd01)',
-      'border-color': '#8ccf00'
+      background: 'linear-gradient(to bottom, #17243A , #17243A)',
+      'border-color': '#17243A'
     }
   }, {
-    value: 'PHP',
-    logo: 'https://cdn.ijason.cc/static/images/logos/php.png',
+    value: 'jQuery',
+    logo: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/jquery.jpeg',
     style: {
-      background: 'linear-gradient(to bottom, #8093d1 , #7b8ec9)',
-      'border-color': '#8093d1'
+      background: 'linear-gradient(to bottom, #126aab , #126aab)',
+      'border-color': '#126aab'
     }
   }, {
-    value: 'Python',
-    logo: 'https://cdn.ijason.cc/static/images/logos/python.png'
+    value: 'ES6',
+    logo: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/ES6.png',
+    style: {
+      background: '#f5d75f',
+      border: '5px solid #f5d75f'
+    }
   }, {
     value: 'Photoshop',
     logo: 'https://cdn.ijason.cc/static/images/logos/photoshop.png',
@@ -95,15 +99,15 @@ const base = {
     }
   }],
   projects: [{
-    image: 'https://cdn.ijason.cc/static/images/projects/goszu.jpg',
-    desc: '一个为深圳大学学生开发的网址导航，收集了大部分学生常用或者难找的网站。前端使用 Vue.js 开发，后端使用 PHP 和 MySQL 搭建，用户首次访问即缓存网站数据在 LocalStorage 里面。',
-    url: 'http://www.goszu.com/',
-    qrcode: 'https://cdn.ijason.cc/static/images/projects/goszu_qrcode.png'
+    image: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/book.png',
+    desc: '是基于React开发的webApp，一个旨在为以书会友的借书公众号，可以将用户不需要的书或者想要处理的书借给或者转卖给别人，只准许微信进入该网页。',
+    url: 'http://m.canger.me',
+    qrcode: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/canger.png'
   }, {
-    image: 'https://cdn.ijason.cc/static/images/projects/powerusage.jpg',
-    desc: '这是一个宿舍电费查询工具，每天会自动抓取当天剩余可用电量，并可根据最近一周使用情况计算出剩余可用的天数。同时，在电费不足的时候，会自动通过微信公众号发送模板消息提醒用户。',
-    url: 'http://www.wacxt.cn/powerusage/',
-    qrcode: 'https://cdn.ijason.cc/static/images/projects/powerusage_qrcode.png'
+    image: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/music.png',
+    desc: '一个手机在线音乐播放器，实现了歌词的实时显示，下一曲，暂停，收藏等功能。使用React,webpack进行打包。',
+    url: 'https://aleenl.github.io/NewReactMusic/build/index.html?from=timeline',
+    qrcode: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/musicer.png'
   }, {
     image: 'https://cdn.ijason.cc/static/images/projects/szucheduleapp.jpg',
     desc: '一款为深圳大学学生开发的课表查询 App，可以自动同步教务处网站上的课程信息，随时随地查询课程表及课程详细信息。是一款使用 Vue.js 三件套和 Cordove 开发的一款 Hybrid App。',
@@ -114,32 +118,22 @@ const base = {
   designs: {
     jingmei: {
       background: `#859398`,
-      mainImage: 'https://cdn.ijason.cc/static/images/designs/mockup_jingmei.png',
-      title: '静魅',
-      subTitle: '魅族 FlymeOS 主题',
-      desc: '这是 2014 年我参加魅族主题大赛的参赛作品，设计风格采用了无棱角图标，搭配饱和度较低的配色，与山水背景衬托出一种静和清爽的感觉。',
-      link: 'http://www.ui.cn/detail/26910.html',
-      linkRefer: '去 ui.cn 查看详情',
+      mainImage: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/mockup_jingmei.png',
+      title: '苍耳书友',
+      subTitle: '一个以书为友的线上APP',
+      desc: '工作时间： 2017年4月 - 至今',
+      link: 'http://m.canger.me',
+      linkRefer: '可以去微信搜索《苍耳书友》',
       posi: 'left'
     },
     mi4Mockup: {
       background: '#222',
-      mainImage: 'https://cdn.ijason.cc/static/images/designs/mockup_mi4.png',
-      title: '小米 4 模型',
-      subTitle: '手机展示模型 Psd',
-      desc: '临摹小米官网的小米手机4模型。全矢量绘制，屏幕部分采用智能对象，可嵌入展示图片。',
-      link: 'http://www.ui.cn/detail/21758.html',
-      linkRefer: '去 ui.cn 查看详情',
-      posi: 'left'
-    },
-    logos: {
-      background: '#F8F8F8',
-      mainImage: 'https://cdn.ijason.cc/static/images/designs/logos.png',
-      title: 'LOGO',
-      subTitle: '',
-      desc: '为一些公众号的和网站所设计的Logo',
-      link: '',
-      linkRefer: '',
+      mainImage: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/mac2.png',
+      title: '小教室',
+      subTitle: '一个线上直播教育平台',
+      desc: '工作时间： 2016年9月 - 2017年3月',
+      link: 'http://www.xiaojs.cn/exhibition',
+      linkRefer: '去官网上看看',
       posi: 'left'
     }
   },

@@ -36,13 +36,13 @@
 				color: #666;
 				font-size: 16px;
 				line-height: 22px;
-				text-align: justify;
 
 				/* for hide long text */
-				display: -webkit-box;
-				-webkit-box-orient: vertical;
-				-webkit-line-clamp: 3;
-				overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        height:3rem;
 			}
 
 			.time {
@@ -79,6 +79,7 @@
 			.article {
 				margin-right: 0;
 				width: 100%;
+        margin-top: 10px;
 				padding: 10px 20px;
 				border-radius: 0;
 				box-shadow: none;
@@ -93,12 +94,8 @@
 				}
 			}
 
-			.article:nth-child(1) {
-				border-radius: 6px 6px 0 0;
-			}
-
-			.article:last-child {
-				border-radius: 0 0 6px 6px;
+			.article {
+				border-radius: 6px
 			}
 		}
 	}

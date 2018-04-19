@@ -16,8 +16,8 @@ export default [{
   en: 'Projects'
 }, {
   path: 'designs',
-  cn: '设计作品',
-  en: 'Designs'
+  cn: '工作经历',
+  en: 'Working'
 }, {
   path: 'articles',
   cn: '个人博客',

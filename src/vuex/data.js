@@ -6,18 +6,56 @@
 // import route map
 import routeMap from '../router'
 
-const __RES__ = JSON.parse(JSON.stringify(window.__RES__))
+// const __RES__ = JSON.parse(JSON.stringify(window.__RES__))
+//
+// const articles = __RES__.contentsSortedByTime.slice(0, 6).map(art => {
+//   art = __RES__.contents[art]
+//
+//   return {
+//     title: 'hello',
+//     thumb: art.desc.slice(0, 200),
+//     url: `https://blog.ijason.cc/article/${art.name}`,
+//     time: art.mtime
+//   }
+// })
 
-const articles = __RES__.contentsSortedByTime.slice(0, 6).map(art => {
-  art = __RES__.contents[art]
-
-  return {
-    title: art.title,
-    thumb: art.desc.slice(0, 200),
-    url: `https://blog.ijason.cc/article/${art.name}`,
-    time: art.mtime
-  }
-})
+const art = [{
+  title: '理解Redux',
+  thumb: '昨天花了很久的时间，终于有些理解Redux了。根据官方的文档也做出了一个例子而且运用到我的项目中去。',
+  url: `https://aleenl.github.io/2017/09/09/%E7%90%86%E8%A7%A3Redux/`,
+  time: ' 2017-09-09',
+  view: 22
+}, {
+  title: 'React-Route-v4的一些API(2)',
+  thumb: '昨天我们已经讲了RR4最重要的组件，今天我们将接触到一个也很重要的组件',
+  url: `https://aleenl.github.io/2017/08/18/React-Route-v4%E7%9A%84%E4%B8%80%E4%BA%9BAPI-2/`,
+  time: '2017-08-18',
+  view: 13
+}, {
+  title: 'Action Creator',
+  thumb: '上一章节我们讲了Action，讲了Store和State，我们了解到一个页面应用只能有一个Store，也了解了Redux中，一个State对应一个View',
+  url: `https://aleenl.github.io/2017/08/11/Action-Creator/`,
+  time: '2017-08-11',
+  view: 34
+}, {
+  title: 'Object.assign的用法',
+  thumb: 'object.assign方法的用处',
+  url: `https://aleenl.github.io/2017/08/08/es6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97-1/`,
+  time: '2017-08-08',
+  view: 52
+}, {
+  title: 'React的事件处理',
+  thumb: 'React元素的事件处理和DOM元素很相似，但是有一点语法上的不同。',
+  url: `https://aleenl.github.io/2017/08/06/React%E6%8C%87%E5%8D%97/`,
+  time: '2017-08-06',
+  view: 17
+}, {
+  title: '原型',
+  thumb: 'OOP是Object Oriented Programming的简称，即面向对象设计。',
+  url: `https://aleenl.github.io/2017/07/23/%E5%8E%9F%E5%9E%8B/`,
+  time: '2017-07-23',
+  view: 122
+}].map(value => value)
 
 const base = {
   title: 'Aleen 的简历',
@@ -109,10 +147,10 @@ const base = {
     url: 'https://aleenl.github.io/NewReactMusic/build/index.html?from=timeline',
     qrcode: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/musicer.png'
   }, {
-    image: 'https://cdn.ijason.cc/static/images/projects/szucheduleapp.jpg',
-    desc: '一款为深圳大学学生开发的课表查询 App，可以自动同步教务处网站上的课程信息，随时随地查询课程表及课程详细信息。是一款使用 Vue.js 三件套和 Cordove 开发的一款 Hybrid App。',
-    url: 'https://github.com/heyszu/szuschedule-app',
-    qrcode: 'https://cdn.ijason.cc/static/images/projects/szucheduleapp_qrcode.png'
+    image: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/carousel2.png',
+    desc: '一个比较复杂的轮播页面，实现的下一页和上一页的功能，同时提 供缩略图，加载进度等',
+    url: 'https://aleenl.github.io/new-carousel/newCarouel.html#',
+    qrcode: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/qCardlunbo.png'
   }],
   projectRefer: '在我的 Github 查看更多项目',
   designs: {
@@ -137,75 +175,75 @@ const base = {
       posi: 'left'
     }
   },
-  articles
+  art
 }
 
 const en = {
-  title: `Jason's resume`,
-  name: 'Jason Chen',
-  shortDescription: 'A student, front-end developer...',
-  description: `I started learning front-end development and participating in development and maintenance of a number of WeChat public accounts in school when I was a freshman at university. At the same time, I began to follow the open source community and the front-end ecosystem closely. Now work in Tencent as trainee.`,
+  title: `Allen's resume`,
+  name: 'Allen Lee',
+  shortDescription: 'Working experience for two years, front-end developer...',
+  description: `Since 2015, learning the front end, after a year of study, working two years, now in the leadership of the LinkCubic, responsible for the development and maintenance of public numbers and small programs`,
   infomations: [{
     icon: 'https://cdn.ijason.cc/static/svgs/info/birthday.svg',
     key: 'Birthday',
-    value: '1996.2.11'
+    value: '1991.2.17'
   }, {
     icon: 'https://cdn.ijason.cc/static/svgs/info/education.svg',
     key: 'Education',
-    value: 'CIE · SZU'
+    value: 'WNU · SHX'
   }, {
     icon: 'https://cdn.ijason.cc/static/svgs/info/nowCity.svg',
     key: 'Live in',
-    value: 'Shenzhen, Guangdong'
+    value: 'Chongqing, Chongqing'
   }, {
     icon: 'https://cdn.ijason.cc/static/svgs/info/email.svg',
     key: 'Email',
-    value: 'jason@iszu.cn'
+    value: 'aleenli1992@gmail.com'
   }, {
     icon: 'https://cdn.ijason.cc/static/svgs/info/phone.svg',
     key: 'Phone Number',
-    value: '+86 13128931074'
+    value: '+86 185 8036 0217'
   }, {
     icon: 'https://cdn.ijason.cc/static/svgs/info/company.svg',
     key: 'Company',
-    value: 'Tencent.Inc'
+    value: 'LinkCubic'
   }],
   projects: [{
-    image: 'https://cdn.ijason.cc/static/images/projects/goszu.jpg',
-    desc: 'A website navigation for students of Shenzhen University. It collects many commonly used websites and some websites hard to find. This site is powered by Vue.js and Node.js for backend.',
-    url: 'http://www.goszu.com/',
-    qrcode: 'https://cdn.ijason.cc/static/images/projects/goszu_qrcode.png'
+    image: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/book.png',
+    desc: 'It\'s a React - based webApp, a public number for book friends, which can lend or resell a book or a book that the user does not need, only to allow WeChat to enter the web.',
+    url: 'http://m.canger.me',
+    qrcode: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/canger.png'
   }, {
-    image: 'https://cdn.ijason.cc/static/images/projects/powerusage.jpg',
-    desc: `It's a website that can query the remaining electricity of dormitory, predict available days based on your usage, and also can push low-power-warning via Wechat.`,
-    url: 'http://www.wacxt.cn/powerusage/',
-    qrcode: 'https://cdn.ijason.cc/static/images/projects/powerusage_qrcode.png'
+    image: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/music.png',
+    desc: `A mobile phone online music player, the realization of the lyrics real-time display, the next song, pause, collection and other functions. Use React, webpack for packaging.`,
+    url: 'https://aleenl.github.io/NewReactMusic/build/index.html?from=timeline',
+    qrcode: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/musicer.png'
   }, {
-    image: 'https://cdn.ijason.cc/static/images/projects/szucheduleapp.jpg',
-    desc: `A app can auto sync class schedule from server. You can inquire your class infomations everywhere. It's based on Cordova and Vue.js and Node.js for backend. `,
-    url: 'https://github.com/heyszu/szuschedule-app',
-    qrcode: 'https://cdn.ijason.cc/static/images/projects/szucheduleapp_qrcode.png'
+    image: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/carousel2.png',
+    desc: 'A complicated carousel Web page, have the next page and previous page function, at the same time provide thumbnails, loading etc.',
+    url: 'https://aleenl.github.io/new-carousel/newCarouel.html#',
+    qrcode: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/qCardlunbo.png'
   }],
   projectRefer: 'See more projects in my Github',
   designs: {
     jingmei: {
       background: `#859398`,
-      mainImage: 'https://cdn.ijason.cc/static/images/designs/mockup_jingmei.png',
-      title: 'Silence',
-      subTitle: 'Theme for FlymeOS',
-      desc: 'This is a theme designing for MEIZU Flyme Theme Competition 2014. No edges and corners icons, with low saturation color and the wallpaper to bring out a quiet feeling.',
-      link: 'http://www.ui.cn/detail/26910.html',
-      linkRefer: 'See detail in ui.cn',
+      mainImage: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/mockup_jingmei.png',
+      title: 'Cang Er',
+      subTitle: 'Web App for friend with book',
+      desc: 'Working: 2017.04 - now',
+      link: 'http://m.canger.me',
+      linkRefer: 'Search cangEr in WeChat',
       posi: 'left'
     },
     mi4Mockup: {
       background: '#222',
-      mainImage: 'https://cdn.ijason.cc/static/images/designs/mockup_mi4.png',
-      title: 'Mi4 Mockup',
-      subTitle: 'Phone mockup psd',
-      desc: 'Copy painting from offcial website of Xiaomi 4. Fully vector painting, the screen use intelligent object, can be embedded in the display picture.',
-      link: 'http://www.ui.cn/detail/21758.html',
-      linkRefer: 'See detail in ui.cn',
+      mainImage: 'http://lcimg.oss-cn-hangzhou.aliyuncs.com/video/mac2.png',
+      title: 'Xiaojs',
+      subTitle: 'Live on Inter',
+      desc: 'Working: 2016.09 - 2017.03',
+      link: 'http://www.xiaojs.cn/exhibition',
+      linkRefer: 'Go websites',
       posi: 'left'
     },
     logos: {
@@ -231,3 +269,4 @@ export default {
     route: routeMap.map(v => v.en)
   }
 }
+

@@ -34,17 +34,21 @@
 			.thumb {
 				margin-top: 10px;
 				color: #666;
-				font-size: 16px;
-				line-height: 22px;
+				font-size: 15px;
+				line-height: 20px;
 
 				/* for hide long text */
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3;
         overflow: hidden;
-        height:3rem;
+        height:2.5rem;
 			}
-
+      .showInfo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 			.time {
 				margin-top: 5px;
 				color: #888;
@@ -60,6 +64,15 @@
 					margin-left: 5px;
 				}
 			}
+      .view{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+          width:20px;
+          margin-right: 4px;
+        }
+      }
 
 			&:hover {
 				box-shadow: 0 8px 15px rgba(0,0,0,.2);
@@ -67,6 +80,8 @@
 		}
 	}
 }
+
+
 
 /* adapt mobile browser */
 @media (max-width: 430px) {

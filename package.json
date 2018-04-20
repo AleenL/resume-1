@@ -4,6 +4,7 @@
   "description": "My resume powered by vue.js and deploy on ijason.cc",
   "author": "allen",
   "private": true,
+  "homepage": "https://aleenl.github.io/resume-1/dist/",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
